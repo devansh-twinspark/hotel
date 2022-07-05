@@ -31,34 +31,28 @@ get_header();?>
 </div>
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
+<?php 
+global $post;
+$main_args = ['post_type' => 'advantages'];
+// execute the main query
+$the_main_loop = new WP_Query($main_args);
+// go main query
+if($the_main_loop->have_posts()) {
+    while($the_main_loop->have_posts()) { 
+    $the_main_loop->the_post(); 
+?>
 <div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
 <div class="ttr_About_html_column11">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">ALIQUAM VOLUTNA ERATFU</span></p><p style="margin:1.43em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">Lorem ipsum dolor sit, consectetuer adipiscing elit. Prat vtibu molestie lacus Aenean nonummy hendrerit maura sellus port. magnis dis parturient montes, nascetur ridiculus musulla dui. Fusce feugiat mesuada odio. Morbi nunc odio, gravida at, cursus maecenas tristique oi ac sem.</span></p></div>
+<div class="html_content"><p style="text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;"><?php the_title();?></span></p><p style="margin:1.43em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';"><?php the_content();?></span></p></div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
-<div class="ttr_About_html_column12">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">QUISQUE TELLUS NISVIRRA</span></p><p style="margin:1.43em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">Duis ultricies pharetra magna. Donec accumsan males uada orci. Donec sit amet eros. Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget, element cursus eleifend, elit. Aenean auctor wisi et.</span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
-<div class="ttr_About_html_column13">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">NAM SOLLICITU NEQUE</span></p><p style="margin:1.43em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">Curabitur facilisis pellentesque pharetra. Donec justo urna, malesuada a viverra ac, pellentesque vitae nunc. Aenean ac leo eget nunc fringilla a non nulla! Nunc orci mi, venenatis quis ultrices vitae, congue non nibh. Nulla bibendum. bibendum, justo eget ultrices </span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
+<?php   } // endwhile
+    wp_reset_postdata(); 
+}
+?>
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
 </div>

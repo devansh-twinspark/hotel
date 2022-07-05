@@ -222,4 +222,93 @@ $args = array(
 
  );
 register_post_type( 'Services',$args);
+
+$supports = array(
+'title', // post title
+'editor', // post content
+'author', // post author
+'thumbnail', // featured images
+'excerpt', // post excerpt
+'custom-fields', // custom fields
+'comments', // post comments
+'revisions', // post revisions
+'post-formats', // post formats
+
+);
+
+
+$labels = array(
+'name' => _x('advantages', 'plural'),  //post_type ll always  be in plural 
+'singular_name' => _x('advantages', 'singular'),
+'menu_name' => _x('advantages', 'admin menu'),
+'name_admin_bar' => _x('advantages', 'admin bar'),
+'add_new' => _x('Add New', 'add new'),
+'add_new_item' => __('Add New advantages'),
+'new_item' => __('New advantages'),
+'edit_item' => __('Edit advantages'),
+'view_item' => __('View advantages'),
+'view_item' => __('View advantages'),
+'all_items' => __('All advantages'),
+'search_items' => __('Search advantages'),
+
+
+);
+ 
+$args = array(
+	'supports' => $supports,
+  'labels' => $labels,
+  'public' => true,
+  'has_archive' => false,
+  'rewrite' => array('slug' => 'advantages'),
+  'taxonomies' => array( 'category', 'post_tag' ),
+  'show_ui' => true,
+  'menu_icon' => 'dashicons-cart',
+
+ );
+register_post_type( 'advantages',$args);
+
+$supports = array(
+'title', // post title
+'editor', // post content
+'author', // post author
+'thumbnail', // featured images
+'excerpt', // post excerpt
+'custom-fields', // custom fields
+'comments', // post comments
+'revisions', // post revisions
+'post-formats', // post formats
+
+);  
+
+
+$labels = array(
+'name' => _x('leisurerooms', 'plural'),  //post_type ll always  be in plural 
+'singular_name' => _x('leisurerooms', 'singular'),
+'menu_name' => _x('leisurerooms', 'admin menu'),
+'name_admin_bar' => _x('leisurerooms', 'admin bar'),
+'add_new' => _x('Add New', 'add new'),
+'add_new_item' => __('Add New leisurerooms'),
+'new_item' => __('New leisurerooms'),
+'edit_item' => __('Edit leisurerooms'),
+'view_item' => __('View leisurerooms'),
+'view_item' => __('View leisurerooms'),
+'all_items' => __('All leisurerooms'),
+'search_items' => __('Search leisurerooms'),
+
+
+);
+ 
+$args = array(
+	'supports' => $supports,
+  'labels' => $labels,
+  'public' => true,
+  'has_archive' => false,
+  'rewrite' => array('slug' => 'leisurerooms'),
+  'taxonomies' => array( 'category', 'post_tag' ),
+  'show_ui' => true,
+  'menu_icon' => 'dashicons-building',
+
+ );
+register_post_type( 'leisurerooms',$args);
+
 }

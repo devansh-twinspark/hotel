@@ -8,6 +8,7 @@ get_header();?>
 <div id="ttr_content_margin"class="container-fluid">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div class="ttr_Services_html_row0 row">
+
 <div class="post_column col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="ttr_Services_html_column00">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
@@ -16,90 +17,32 @@ get_header();?>
 <div style="clear:both;"></div>
 </div>
 </div>
+
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
+
+<?php 
+global $post;
+$main_args = ['post_type' => 'services'];
+// execute the main query
+$the_main_loop = new WP_Query($main_args);
+// go main query
+if($the_main_loop->have_posts()) {
+    while($the_main_loop->have_posts()) { 
+    $the_main_loop->the_post(); 
+?>
 <div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
 <div class="ttr_Services_html_column01">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/48.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">RESTAURANT</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Bulum iaculis lacinia est. Proin dictum elemn tum velit sce euismod cons equat ante. Cum sociis natoque penatibus et dis part urient montes, nascetur ridiculus mus. Vestib ulum id ligula </span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?><img src="<?php echo $url ?>" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;"><?php the_title();?></span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';"><?php the_content();?></span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column02">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/49.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">RECEPTION</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo rem que laudantium, totam rem aper iam, eaque ipsa quae ab illo inventore veritatis eatae ornare.</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column03">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/50.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">FREE WIFI</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Pellentesque eu,pretium quis, sem. Nulla consequat massa quis enim.Donec pede justo,fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut , imperdiet a, venenatis</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column04">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/51.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">FREE WIFI</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Pellentesque eu,pretium quis, sem. Nulla consequat massa quis enim.Donec pede justo,fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut , imperdiet a, venenatis</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span> </span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
-</div>
-</div>
-<div class="ttr_Services_html_row1 row">
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column10">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/52.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">GYMNASIUM</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;"> SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Fusce euismod consequat ante. Lorem ipsum dolor sit amet, consectetuer adi piscing elit. Pellentesque sed dolor. Aliq uam congue fermentum nisl. Nam libero tempore, cum soluta </span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span> </span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column11">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/53.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SAFE PARKING</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Etharum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus Donec sagittis culpa qui officia deserunt</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span> </span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column12">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/54.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">TAXI </span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt. Aliquam congue fermentum nisl.</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span> </span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Services_html_column13">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/55.png" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">LUGGAGE</span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';">Cras porttitor blandit bibendum. Praesent sit amet laoreet nibh. Mauris turpis diam, fringilla maximus ullamcorper Donec eget aliquam massa. Donec eget aliquam massa. Etiam ac dui.</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span> </span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
-</div>
+<?php   } // endwhile
+    wp_reset_postdata(); 
+}
+?>
 </div>
 <div class="ttr_Services_html_row2 row">
 <div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -110,8 +53,7 @@ get_header();?>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-xs-block">
-</div>
+
 <div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
 <div class="ttr_Services_html_column21">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
@@ -120,8 +62,7 @@ get_header();?>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-xs-block">
-</div>
+
 <div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
 <div class="ttr_Services_html_column22">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
@@ -130,8 +71,7 @@ get_header();?>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
-</div>
+
 </div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 </div>
