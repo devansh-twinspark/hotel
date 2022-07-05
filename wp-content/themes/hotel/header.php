@@ -95,7 +95,7 @@ if( $post->ID == 165) {
 <li class="ttr_menu_items_parent dropdown active"><a href="#" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Home</a>
 <hr class ="horiz_separator"/>
 </li>
-<li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>About</a>
+<li class="ttr_menu_items_parent dropdown"><a href="http://localhost/mysite.com/?page_id=167" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>About</a>
 <hr class ="horiz_separator"/>
 </li>
 <li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Rooms</a>

@@ -312,3 +312,85 @@ $args = array(
 register_post_type( 'leisurerooms',$args);
 
 }
+
+function add_your_fields_meta_box() {
+    	add_meta_box(
+    		'your_fields_meta_box', // $id
+    		'Custom Fields', // $title
+    		'show_your_fields_meta_box', // $callback
+    		'services', // $screen
+    		'normal', // $context
+    		'high' // $priority
+    	);
+    }
+    add_action( 'add_meta_boxes', 'add_your_fields_meta_box' );
+
+    function show_your_fields_meta_box($post_id) {
+    	global $post;
+    	// print_r($post_id);die();
+    		$meta = get_post_meta( $post_id->ID, 'service_name', true ); 
+    		$meta_a = get_post_meta( $post_id->ID, 'service_by', true );
+    		// print_r($meta);die('ss');
+    		?>
+    		<label><b>Service Name</b></label>
+    	<input type="text" name="service_name" value="<?php echo $meta;?>">
+    	<label><b>Served By</b></label>
+    	<input type="text" name="service_by" value="<?php echo $meta_a;?>">
+
+    	<select name="service_name" required>
+    			<option>Please Select</option>
+			  <option value="volvo">Volvo</option>
+			  <option value="saab">Saab</option>
+			  <option value="mercedes">Mercedes</option>
+			  <option value="audi">Audi</option>
+			</select>
+
+        <!-- All fields will go here -->
+
+    	<?php }
+
+function save_your_fields_meta( $post_id ) {
+    	// verify nonce
+    	/*if ( !wp_verify_nonce( $_POST['service_name'], basename(__FILE__) ) ) {
+    		return $post_id;
+    	}*/
+    	// check autosave
+    	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+    		return $post_id;
+    	}
+    	// check permissions
+    	if ( 'services' === $_POST['post_type'] ) {
+    		if ( !current_user_can( 'edit_page', $post_id ) ) {
+    			return $post_id;
+    		} elseif ( !current_user_can( 'edit_post', $post_id ) ) {
+    			return $post_id;
+    		}
+    	}
+
+    	//$old = get_post_meta( $post_id, 'service_name', true );
+    	$new = $_POST['service_name'];
+    	$new_a= $_POST['service_by'];
+	/*echo "<pre>";
+	print_r($new);
+	echo "</pre>";
+	die('ss');*/
+
+    	// if ( $new && $new !== $old ) {
+    		update_post_meta( $post_id, 'service_name', $new );
+    		update_post_meta( $post_id, 'service_by', $new_a );
+    	//}
+    	 /*elseif ( '' === $new && $old ) {
+    		delete_post_meta( $post_id, 'testimonial_name', $old );
+    	}*/
+    }
+    add_action( 'save_post', 'save_your_fields_meta' );
+
+
+// add_action( 'wp_enqueue_scripts', 'twentytwenty_styles' );
+add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+  
+function add_my_post_types_to_query( $query ) {
+    if ( is_home() && $query->is_main_query() )
+        $query->set( 'post_type', array( 'post', 'services' ) );
+    return $query;
+}

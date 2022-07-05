@@ -30,11 +30,16 @@ $the_main_loop = new WP_Query($main_args);
 if($the_main_loop->have_posts()) {
     while($the_main_loop->have_posts()) { 
     $the_main_loop->the_post(); 
+    $service_name = get_post_meta( $post->ID, 'service_name', true );
 ?>
 <div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
 <div class="ttr_Services_html_column01">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?><img src="<?php echo $url ?>" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;"><?php the_title();?></span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">SERVICES</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';"><?php the_content();?></span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?><img src="<?php echo $url ?>" class="ttr_fill" style="max-width:62px;max-height:62px;" /></span></span><br style="font-family:'Droid Serif';font-size:1.571em;" /></p><p style="text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;"><?php the_title();?></span></p><p style="margin:0em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;"></span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span style="font-family:'Roboto','Roboto';"><?php the_content();?></span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span>
+<?php if(!empty($service_name)){?>
+	<a href="#" target="_self" class="btn btn-md btn-default"><?php echo $service_name; ?></a>
+<?php }?>
+</span></p></div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div style="clear:both;"></div>
 </div>
@@ -45,6 +50,7 @@ if($the_main_loop->have_posts()) {
 ?>
 </div>
 <div class="ttr_Services_html_row2 row">
+
 <div class="post_column col-lg-4 col-md-4 col-sm-4 col-xs-12">
 <div class="ttr_Services_html_column20">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
