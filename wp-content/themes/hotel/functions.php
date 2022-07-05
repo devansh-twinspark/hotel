@@ -194,7 +194,7 @@ function create_custom_post_type() {
 
 
 $labels = array(
-'name' => _x('Services', 'plural'),  //post_type ll always  be in plural 
+'name' => _x('services', 'plural'),  //post_type ll always  be in plural 
 'singular_name' => _x('Services', 'singular'),
 'menu_name' => _x('Services', 'admin menu'),
 'name_admin_bar' => _x('Services', 'admin bar'),

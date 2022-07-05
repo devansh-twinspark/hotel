@@ -92,7 +92,7 @@
 <li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Rooms</a>
 <hr class ="horiz_separator"/>
 </li>
-<li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Services</a>
+<li class="ttr_menu_items_parent dropdown"><a href="http://localhost/mysite.com/?page_id=175" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Services</a>
 <hr class ="horiz_separator"/>
 </li>
 <li class="ttr_menu_items_parent dropdown"><a href="#" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Contact</a>
