@@ -51,7 +51,16 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="Home">
+<?php 
+global $post;
+if( $post->ID == 165) {
+   echo '<body class="Home">';
+}else if ($post->ID ==167 ){
+   echo '<body class="About">';
+}else{
+   echo '<body class="Services">';
+}?>
+
 <?php wp_body_open(); ?>
 <div class="totopshow">
 <a href="#" class="back-to-top"><img alt="Back to Top" src="<?php echo get_template_directory_uri(); ?>/images/gototop0.png"/></a>
