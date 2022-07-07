@@ -8,18 +8,26 @@ get_header();?>
 <div class="ttr_slideshow">
 <div id="ttr_slideshow_inner">
 <ul>
-<li id="Slide0" class="ttr_slide" data-slideEffect="Fade" style="background:url(<?php echo get_template_directory_uri(); ?>/images/HomeDesktopSlide2.jpg);">
+<?php
 
-<div class="ttr_slideshow_last">
-</div>
-</li>
-<li id="Slide1" class="ttr_slide" data-slideEffect="Fade" style="background:url(<?php echo get_template_directory_uri(); ?>/images/HomeDesktopSlide2.jpg);">
+// Check rows exists.
+if( have_rows('slider') ):
 
-<div class="ttr_slideshow_last">
-</div>
-</li>
-<li id="Slide2" class="ttr_slide" data-slideEffect="Fade" style="background:url(<?php echo get_template_directory_uri(); ?>/images/HomeDesktopSlide2.jpg);">
-</li>
+    // Loop through rows.
+    while( have_rows('slider') ) : the_row();
+
+        // Load sub field value.
+        $sub_value = get_sub_field('imagea');
+    
+
+   ?>
+    <li id="Slide0" class="ttr_slide" data-slideEffect="Fade" style="background:url(<?php echo $sub_value; ?>);"></li>
+
+<?php endwhile;
+
+endif;
+?>
+
 </ul>
 </div>
 <div id="nav"></div>
@@ -119,84 +127,35 @@ get_header();?>
 </div>
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
+<?php
+
+// Check rows exists.
+if( have_rows('leisure_room') ):
+
+    // Loop through rows.
+    while( have_rows('leisure_room') ) : the_row();
+
+        // Load sub field value.
+        $sub_valuee= get_sub_field('iimage');
+    
+
+   ?>
+
+<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12"> 
 <div class="ttr_Home_html_column21">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/36.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo $sub_valuee;?>" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column22">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/37.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column23">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/38.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column24">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/39.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column25">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/40.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column26">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/41.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column27">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/42.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column28">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 0em 0em;"><span><img src="<?php echo get_template_directory_uri(); ?>/images/43.jpg" class="ttr_fill" style="max-width:300px;max-height:192px;" /></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
+<?php endwhile;
+
+endif;
+?>
+
+
+
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
 </div>
