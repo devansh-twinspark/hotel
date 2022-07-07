@@ -19,15 +19,8 @@ get_header();?>
 </div>
 </li>
 <li id="Slide2" class="ttr_slide" data-slideEffect="Fade" style="background:url(<?php echo get_template_directory_uri(); ?>/images/HomeDesktopSlide2.jpg);">
-
-<div class="ttr_slideshow_last">
-</div>
 </li>
 </ul>
-</div>
-<div class="ttr_slideshow_in">
-<div class="ttr_slideshow_last">
-<div class="left-button">
 </div>
 <div id="nav"></div>
 <div class="right-button">
@@ -211,7 +204,7 @@ get_header();?>
 <div class="post_column col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="ttr_Home_html_column30">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="margin:0.36em 0.36em 0.36em 0em;text-align:Center;line-height:2.11267605633803;"><span style="font-family:'Droid Serif','Times New Roman';font-style:italic;font-size:2.286em;color:rgba(142,91,34,1);text-decoration:underline">WHAT THEY SAY ABOUT US</span></p><p style="margin:3.57em 0em 0.36em 0em;text-align:Center;line-height:2.11267605633803;"><span style="font-family:'Roboto','Arial';font-size:1.429em;">Staff are always friendly, welcoming and efficient. Rooms are clean, food excellent, gym well equipped. HotelEngine will continue to be my first choice for my next hotel's website. </span></p><p style="margin:1.43em 0.36em 0.36em 0em;text-align:Center;line-height:2.11267605633803;"><span style="font-family:'Roboto';font-size:1.429em;color:rgba(142,91,34,1);">JUSTIN NGUYEN</span></p></div>
+<div class="html_content"><p style="margin:0.36em 0.36em 0.36em 0em;text-align:Center;line-height:2.11267605633803;"><span style="font-family:'Droid Serif','Times New Roman';font-style:italic;font-size:2.286em;color:rgba(142,91,34,1);text-decoration:underline">WHAT THEY SAY ABOUT US</span></p><p style="margin:3.57em 0em 0.36em 0em;text-align:Center;line-height:2.11267605633803;"><span style="font-family:'Roboto','Arial';font-size:1.429em;"><?php echo get_field('what_they_say_about_us'); ?></span></p><p style="margin:1.43em 0.36em 0.36em 0em;text-align:Center;line-height:2.11267605633803;"><span style="font-family:'Roboto';font-size:1.429em;color:rgba(142,91,34,1);">JUSTIN NGUYEN</span></p></div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div style="clear:both;"></div>
 </div>

@@ -69,7 +69,7 @@ if( $post->ID == 165) {
 <header id="ttr_header">
 <div id="ttr_header_inner">
 <a href="<?php echo get_home_url();?>" target="_self">
-<img  class="ttr_header_logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" >
+<img  class="ttr_header_logo" src="<?php echo get_field('logo',165); ?>" >
 </a>
 </div>
 </header>
