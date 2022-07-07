@@ -339,10 +339,10 @@ function add_your_fields_meta_box() {
 
     	<select name="service_name" required>
     			<option>Please Select</option>
-			  <option value="volvo">Volvo</option>
-			  <option value="saab">Saab</option>
-			  <option value="mercedes">Mercedes</option>
-			  <option value="audi">Audi</option>
+			  <option value="volvo">Learn More</option>
+			  <option value="saab">Read More</option>
+			  <option value="mercedes">Get to Know</option>
+			  <option value="audi">New Tab</option>
 			</select>
 
         <!-- All fields will go here -->
