@@ -38,11 +38,17 @@ endif;
 </div>
 <div class="ttr_banner_slideshow">
 </div>
+
 <div id="ttr_content_and_sidebar_container">
 <div id="ttr_content">
 <div id="ttr_content_margin"class="container-fluid">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
+
+
 <div class="ttr_Home_html_row0 row">
+
+
+   
 <div class="post_column col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <div class="ttr_Home_html_column00">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
@@ -53,44 +59,38 @@ endif;
 </div>
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
+<?php
+
+// Check rows exists.
+if( have_rows('offer_and_services') ):
+
+    // Loop through rows.
+    while( have_rows('offer_and_services') ) : the_row();
+
+        // Load sub field value.
+        $sub_value_alpha = get_sub_field('offer_titile');
+        $sub_value_beta = get_sub_field('offer_details');
+        $sub_value_gama = get_sub_field('offer_image');
+    
+
+   ?> 
 <div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
 <div class="ttr_Home_html_column01">
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 1.79em 0em;"><span><img class="ttr_uniform" src="<?php echo get_template_directory_uri(); ?>/images/31.png" style="max-width:70px;max-height:62px;" /></span></span><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">SPECIAL</span></p><p style="margin:0.36em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">PROMOTION</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">Cum sociis natoque penatibus et magnis dis part urient montes, nascetur ridiculus mus. Vestib ulum id ligula porta felis euis. Donec sed odio dui. Maecenas faucibus mollis interdum aenean rutrum.</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span> </span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 1.79em 0em;"><span><img class="ttr_uniform" src="<?php echo $sub_value_gama; ?>" style="max-width:70px;max-height:62px;" /></span></span><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;"><?php echo $sub_value_alpha; ?></span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';"><?php echo $sub_value_beta; ?></span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span> </span></p></div>
 <div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
 <div style="clear:both;"></div>
 </div>
 </div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column02">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 1.79em 0em;"><span><img class="ttr_uniform" src="<?php echo get_template_directory_uri(); ?>/images/32.png" style="max-width:70px;max-height:62px;" /></span></span><span style="font-family:'Droid Serif','Droid Serif','Arial';font-size:1.571em;">BED &amp; BREAKFAST</span></p><p style="margin:0.36em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Droid Serif','Arial';font-size:1.571em;">PACKAGE</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">Fusce feugiat malesuada odio. orbi nunc odio gravida at cursus nec luctus .Mae cenas tristique orci ac sem. Duis ultricies pharetra magna onec accumsan. male suada Duis diam eros</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-sm-block visible-md-block visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column03">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 1.79em 0em;"><span><img class="ttr_uniform" src="<?php echo get_template_directory_uri(); ?>/images/33.png" style="max-width:70px;max-height:62px;" /></span></span><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">HOTEL</span></p><p style="margin:0.36em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">RESTAURANT</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium inventore&nbsp;&nbsp;inventore dolo rem que laudantium, totam rem aper iam, eaque ipsa quae ab illo inventore veritat is beatae vitae.</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span> </span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
-<div class="clearfix visible-xs-block">
-</div>
-<div class="post_column col-lg-3 col-md-6 col-sm-6 col-xs-12">
-<div class="ttr_Home_html_column04">
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;text-align:center;overflow:hidden;margin:0em 0em 1.79em 0em;"><span><img class="ttr_uniform" src="<?php echo get_template_directory_uri(); ?>/images/34.png" style="max-width:70px;max-height:62px;" /></span></span><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">SIGN UP FOR</span></p><p style="margin:0.36em 0.36em 0.36em 0.36em;text-align:Center;"><span style="font-family:'Droid Serif','Times New Roman';font-size:1.571em;">OUR GUESTBOOK</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.54929577464789;"><span style="font-family:'Roboto','Arial';">pellentesque eu,pretium quis, sem. Nulla consequat massa quis enim.Donec pede justo,fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut , imperdiet a, venenatis vitae</span></p><p style="margin:0.71em 0.36em 0.36em 0.36em;text-align:Center;line-height:1.76056338028169;"><span><span><a HREF="#" target="_self" class="btn btn-md btn-default">READ MORE</a></span></span></p></div>
-<div style="height:0px;width:0px;overflow:hidden;-webkit-margin-top-collapse: separate;"></div>
-<div style="clear:both;"></div>
-</div>
-</div>
+
+<?php endwhile;
+
+endif;
+?>
+
+
+
+
 <div class="clearfix visible-lg-block visible-sm-block visible-md-block visible-xs-block">
 </div>
 </div>
